@@ -5,6 +5,7 @@
 [sub_resource type="BoxMesh" id="BoxMesh_qdvjj"]
 
 [node name="Repulsor" type="Repulsor"]
+pid_kd = 0.0
 
 [node name="RaySensor" type="RaySensor" parent="."]
 

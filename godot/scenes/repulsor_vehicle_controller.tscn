@@ -3,5 +3,11 @@
 [ext_resource type="PackedScene" uid="uid://b117devoqgrns" path="res://scenes/repulsor_vehicle.tscn" id="1_wbqnv"]
 
 [node name="RepulsorVehicleController" type="RepulsorVehicleController"]
+throttle_rate = 0.5
+pitch_throttle = 4.0
+yaw_throttle = 4.0
+roll_throttle = 2.5
+repulsor_front_max_height_cache = 50.0
+repulsor_back_max_height_cache = 34.62
 
 [node name="RepulsorVehicle" parent="." instance=ExtResource("1_wbqnv")]

@@ -11,5 +11,6 @@ config_version=5
 [application]
 
 config/name="vehicle_workshop_v0.1.0"
+run/main_scene="uid://jspf64w0btap"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://art/icon.svg"
