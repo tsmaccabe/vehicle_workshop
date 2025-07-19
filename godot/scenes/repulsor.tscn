@@ -5,6 +5,8 @@
 [sub_resource type="BoxMesh" id="BoxMesh_qdvjj"]
 
 [node name="Repulsor" type="Repulsor"]
+slope_stickiness_offset = 14.0
+slope_stickiness_onset = 0.3
 pid_kd = 0.0
 
 [node name="RaySensor" type="RaySensor" parent="."]

@@ -13,6 +13,7 @@ size = Vector3(4, 1.2, 4)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
 mass = 3.0
+gravity_scale = 4.0
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
 mesh = SubResource("BoxMesh_wehst")
@@ -35,12 +36,14 @@ angular_limit/softness = 0.01
 [node name="Repulsor" parent="JointFrontRightThrust" instance=ExtResource("1_i5u3r")]
 target_height = 25.0
 max_thrust_height = 100.0
-pid_kp = 1.0
-pid_ki = 1.0
+slope_stickiness_offset = 6.3
+slope_stickiness_onset = 0.5
+pid_kp = 25.0
+pid_ki = 2.0
 pid_kd = 20.0
-pid_pp = 2.0
 transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -0.2, 1, 0)
 mass = 2.0
+gravity_scale = 4.0
 
 [node name="JointFrontLeftThrust" type="HingeJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, -2, -1, 2)
@@ -54,12 +57,14 @@ angular_limit/softness = 0.01
 [node name="Repulsor" parent="JointFrontLeftThrust" instance=ExtResource("1_i5u3r")]
 target_height = 25.0
 max_thrust_height = 100.0
-pid_kp = 1.0
-pid_ki = 1.0
+slope_stickiness_offset = 6.3
+slope_stickiness_onset = 0.5
+pid_kp = 25.0
+pid_ki = 2.0
 pid_kd = 20.0
-pid_pp = 2.0
 transform = Transform3D(0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0, 1, -0.2, 1, 0)
 mass = 2.0
+gravity_scale = 4.0
 
 [node name="JointBackRightThrust" type="HingeJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 2, -1, -2)
@@ -73,11 +78,13 @@ angular_limit/softness = 0.01
 [node name="Repulsor" parent="JointBackRightThrust" instance=ExtResource("1_i5u3r")]
 target_height = 17.25
 max_thrust_height = 100.0
-pid_kp = 1.0
-pid_ki = 1.0
+slope_stickiness_offset = 6.3
+slope_stickiness_onset = 0.5
+pid_kp = 25.0
+pid_ki = 2.0
 pid_kd = 20.0
-pid_pp = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1, 0)
+gravity_scale = 4.0
 
 [node name="JointBackLeftThrust" type="HingeJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 2, -1, 2)
@@ -91,11 +98,13 @@ angular_limit/softness = 0.01
 [node name="Repulsor" parent="JointBackLeftThrust" instance=ExtResource("1_i5u3r")]
 target_height = 17.25
 max_thrust_height = 100.0
-pid_kp = 1.0
-pid_ki = 1.0
+slope_stickiness_offset = 6.3
+slope_stickiness_onset = 0.5
+pid_kp = 25.0
+pid_ki = 2.0
 pid_kd = 20.0
-pid_pp = 2.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 1, 0)
+gravity_scale = 4.0
 
 [node name="HingeJoint3D6" type="HingeJoint3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.67211, 0, -1)
@@ -107,7 +116,6 @@ angular_limit/lower = 0.0
 angular_limit/softness = 0.01
 
 [node name="Fin2" parent="HingeJoint3D6" instance=ExtResource("2_xa70r")]
-fin_drag = 0.2
 transform = Transform3D(-1, 8.74228e-08, 0, -1.03895e-14, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0.0999999, 0, 0)
 
 [node name="HingeJoint3D7" type="HingeJoint3D" parent="."]
@@ -144,7 +152,6 @@ angular_limit/lower = 0.0
 angular_limit/softness = 0.01
 
 [node name="Fin" parent="HingeJoint3D5" instance=ExtResource("2_xa70r")]
-fin_drag = 0.2
 transform = Transform3D(-1, -1.50996e-07, 0, 7.61062e-15, 4.37114e-08, -1, 1.50996e-07, -1, -4.37114e-08, 0.0999999, 0, 0)
 
 [node name="HingeJoint3D10" type="HingeJoint3D" parent="."]
@@ -169,7 +176,6 @@ angular_limit/lower = 0.0
 angular_limit/softness = 0.01
 
 [node name="Fin2" parent="HingeJoint3D9" instance=ExtResource("2_xa70r")]
-fin_drag = 0.2
 transform = Transform3D(-1, 8.74228e-08, 0, -1.03895e-14, 4.37114e-08, -1, -8.74228e-08, -1, -4.37114e-08, 0, 0, 0)
 
 [node name="PinJoint3D2" type="PinJoint3D" parent="."]

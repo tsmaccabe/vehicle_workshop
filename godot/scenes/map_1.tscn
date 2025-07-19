@@ -50,4 +50,5 @@ transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 0, 0, 0)
 shape = SubResource("BoxShape3D_rcydx")
 
 [node name="RepulsorVehicleController" parent="." instance=ExtResource("3_lj2ar")]
+repulsor_strength_speed_factor = 0.05
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 88.8716, 272.631)

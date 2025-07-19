@@ -4,9 +4,13 @@
 
 [node name="RepulsorVehicleController" type="RepulsorVehicleController"]
 throttle_rate = 0.5
-pitch_throttle = 4.0
-yaw_throttle = 4.0
-roll_throttle = 2.5
+pitch_throttle = 6.0
+yaw_throttle = 6.0
+roll_throttle = 3.0
+rotation_damping = 20.0
+repulsor_strength_speed_factor = 1.5
+rotation_speed_factor = 1.0
+pid_kp_cache = 25.0
 repulsor_front_max_height_cache = 50.0
 repulsor_back_max_height_cache = 34.62
 
